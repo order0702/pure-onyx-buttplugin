@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome",
+            "webRoot": "${workspaceFolder}"
+        },
+
+        {
+  "title": "双马达沉浸体验",
+  "description": "Edge2专用｜渐进收缩+振动｜30分钟",
+  "version": 1,
+  "speed": 1.0,
+  "actions": [
+    {"time": 0,    "motor": 0, "action": "Vibrate", "value": 6},
+    {"time": 0,    "motor": 1, "action": "Pattern", "name": "Constrict", "rate": 30},
+    {"time": 120,  "motor": 1, "action": "Pattern", "name": "Stroke", "duration": 180},
+    {"time": 300,  "motor": 0, "action": "Vibrate", "value": 12, "ramp": 30},
+    {"time": 330,  "motor": 1, "action": "Pattern", "name": "Pulse", "intensity": 60},
+    {"time": 420,  "motor": 0, "action": "Random", "min": 8, "max": 16, "duration": 300},
+    {"time": 720,  "motor": 1, "action": "Pattern", "name": "Wave", "duration": 180},
+    {"time": 900,  "motor": 0, "action": "Pattern", "name": "Heartbeat", "duration": 120},
+    {"time": 900,  "motor": 1, "action": "Vibrate", "value": 18},
+    {"time": 1020, "motor": 1, "action": "Pattern", "name": "Chaos", "duration": 180},
+    {"time": 1200, "motor": 0, "action": "Vibrate", "value": 20, "duration": 120},
+    {"time": 1320, "motor": 1, "action": "Pattern", "name": "Stroke", "rate": 80},
+    {"time": 1440, "motor": 0, "action": "Pattern", "name": "Wave", "duration": 180},
+    {"time": 1620, "motor": 0, "action": "Vibrate", "value": 15, "interval": 3},
+    {"time": 1620, "motor": 1, "action": "Pattern", "name": "Constrict", "rate": 40, "duration": 180},
+    {"time": 1800, "motor": 0, "action": "Vibrate", "value": 0},
+    {"time": 1800, "motor": 1, "action": "Pattern", "name": "Stop"}
+  ]
+}
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
